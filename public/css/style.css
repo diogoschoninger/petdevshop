@@ -10,6 +10,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -36,7 +37,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0
+  padding: 1rem;
 }
 
 header .container a {
@@ -46,7 +47,8 @@ header .container a {
   font-weight: bold;
 }
 
-header a:hover {
+header a:hover,
+footer a:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -99,7 +101,6 @@ ul li:hover a {
   font-size: 2.2rem;
   font-weight: bold;
   text-shadow: 1px 1px 2px var(--lighter);
-  margin-bottom: 1rem;
 }
 
 h2 {
@@ -117,39 +118,49 @@ h2 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  margin: 1rem auto;
 }
 
 .item {
   color: var(--lightbg);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 
-.item--image {
+.item-image {
   width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: .3rem;
 }
 
-.item--name {
-  font-size: 15px;
+.item-name {
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
-.item--type,
-.item--color,
-.item--genre {
-  font-size: 13px;
+.item-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-type,
+.item-color,
+.item-genre {
+  font-size: .8rem;
   color: var(--lighter);
-  margin-bottom: 3px;
 }
 
 footer {
-  border-top: 1px solid var(--lighter);
-  padding: 20px 0 !important;
+  padding: 1rem;
+  background-color: var(--main);
   text-align: center;
-  font-size: 16px;
-  color: var(--main);
+  font-size: 1rem;
+  color: #fff;
+}
+
+footer a {
+  color: #777;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
@@ -167,11 +178,11 @@ footer {
 @media (max-width: 500px) {
   .banner {
     height: 200px;
-    font-size: 29px;
+    font-size: 1.8rem;
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 1.2rem;
   }
 
   .list {
@@ -182,17 +193,27 @@ footer {
 @media (max-width: 400px) {
   header .container {
     flex-direction: column;
+    gap: 1rem;
+  }
+
+  header .container a {
+    font-size: 1.5rem;
   }
 
   header input {
     max-width: 100%;
+    font-size: .9rem;
   }
 
-  ul li a {
-    padding: 5px 10px;
+  ul li {
+    font-size: .9rem
   }
 
   .list {
     grid-template-columns: 1fr;
+  }
+
+  .item-name {
+    text-align: center;
   }
 }
