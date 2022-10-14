@@ -4,27 +4,39 @@ import { createMenuObject } from '../helpers/createMenuObject'
 export const home = (req: Request, res: Response) => {
   res.render('pages/page', {
     menu: createMenuObject('all'),
-    title: 'All animals'
+    banner: {
+      background: '/images/allanimals.jpg',
+      title: 'All animals'
+    }
   })
 }
 
 export const dogs = (req: Request, res: Response) => {
   res.render('pages/page', {
     menu: createMenuObject('dog'),
-    title: 'Dogs'
+    banner: {
+      background: '/images/banner_dog.jpg',
+      title: 'Dogs'
+    }
   })
 }
 
 export const cats = (req: Request, res: Response) => {
   res.render('pages/page', {
     menu: createMenuObject('cat'),
-    title: 'Cats'
+    banner: {
+      background: '/images/banner_cat.jpg',
+      title: 'Cats'
+    }
   })
 }
 
 export const fishes = (req: Request, res: Response) => {
   res.render('pages/page', {
     menu: createMenuObject('fish'),
-    title: 'Fishes'
+    banner: {
+      background: '/images/banner_fish.jpg',
+      title: 'Fishes'
+    }
   })
 }

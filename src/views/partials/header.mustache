@@ -29,3 +29,10 @@
         <li class="{{#menu.fish}}active{{/menu.fish}}"><a href="/fishes">Fishes</a></li>
       </ul>
     </nav>
+
+    {{#banner}}
+      <section class="banner" style="background-image: url('{{banner.background}}')">
+        {{banner.title}}
+      </section>
+    {{/banner}}
+  </header>
