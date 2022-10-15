@@ -4,5 +4,9 @@
 ## Installation
 - `npm i`
 
-## Start application
+## Start application (development)
+- `npm run dev`
+
+## Build and start application in production
+- `npm run postinstall`
 - `npm start`
